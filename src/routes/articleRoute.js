@@ -24,8 +24,6 @@ router.get('/articles', async(req, res) => {
         if(!articles){
             res.status(404).send()
         }
-        console.log(typeof(articles))
-        delete articles.author
         res.status(201).send(articles)
     } catch(e){
         res.status(401).send(e.message)
